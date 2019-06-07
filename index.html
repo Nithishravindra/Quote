@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quotes</title>
+</head>
+<style>
+
+h1{
+    display: flex;
+    justify-content: center;
+    background-color:#C6C0C0;
+    font-size: 50px;
+}
+body{
+    background-color: #C6C0C0;
+}
+button {
+  background-color: white;
+  color: black;
+  border: 2px solid rgb(12, 11, 19); 
+  font-size: 20px;
+}
+</style>
+<body>
+    <h1>Quote of the day.</h1>
+    <h2 id ="mod">.</h2>
+    <button onclick="main()">Get Quote</button>
+    <script>
+        
+        async function getQuote() {
+            const data = await fetch('https://api.kanye.rest');
+            const {quote} = await data.json();
+            console.log(quote);
+            return quote;
+        }
+        async function main(){
+            const que = await getQuote();
+            const h2 = document.getElementById("mod");
+            h2.innerText = que;
+        }
+        main();
+
+    </script>
+</body>
+</html>
