@@ -1,5 +1,16 @@
 # Quote
 Quote from kenye.rest
 
-Install by using ~ npm i kanye-quote
-Usuage  ~ quote 
+## Install
+
+```
+npm i kanye-quote -g
+```
+
+## Usuage
+```
+$ quote
+```
+
+## License
+[MIT](LICENSE)
