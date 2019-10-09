@@ -11,6 +11,3 @@ npm i kanye-quote -g
 ```
 $ quote
 ```
-
-## License
-[MIT](LICENSE)
